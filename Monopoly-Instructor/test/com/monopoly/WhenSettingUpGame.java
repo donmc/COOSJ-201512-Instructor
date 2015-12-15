@@ -12,29 +12,30 @@ public class WhenSettingUpGame {
 	@Test
 	public void shouldHave40Squares() {
 		// setup + exercise
-		MonopolyGame game = new MonopolyGame();
+		MonopolyGame game = new MonopolyGame(4);
 		List<Square> squares = game.getSquares();
 		
 		// verify
 		assertEquals(40, squares.size());
 	}
 	
-	@Ignore
 	@Test
 	public void shouldHaveCorrectNumberOfPlayers() {
-		fail("Not yet implemented");
+		MonopolyGame game  = new MonopolyGame(4);
+		
+		List<Player> players = game.getPlayers();
+		
+		assertEquals(4, players.size());
 	}
 	
-	@Ignore
-	@Test
+	@Test(expected=WrongNumberOfPlayersException.class)
 	public void shouldErrorWithTooManyPlayers() {
-		fail("Not yet implemented");
+		new MonopolyGame(9);
 	}
 	
-	@Ignore
-	@Test
+	@Test(expected=WrongNumberOfPlayersException.class)
 	public void shouldErrorWithTooFewPlayers() {
-		fail("Not yet implemented");
+		new MonopolyGame(1);
 	}
 	
 	@Ignore
