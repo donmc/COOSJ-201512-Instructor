@@ -21,4 +21,12 @@ public class Square {
 		this.nextSquare = nextSquare;
 	}
 
+	public void landOnBy(Player player) {
+		
+	}
+
+	public void passOverBy(Player player) {
+		
+	}
+
 }

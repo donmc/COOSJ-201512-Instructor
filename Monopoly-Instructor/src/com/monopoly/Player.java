@@ -33,9 +33,24 @@ public class Player {
 
 	private void move(int rollValue) {
 		
-		for (int i = 0; i < rollValue; i++) {
-			location = location.getNextSquare();
+		for (int i = 0; i < rollValue - 1; i++) {
+			step();
+			location.passOverBy(this);
 		}
+		step();
+		location.landOnBy(this);
+	}
+
+	private void step() {
+		location = location.getNextSquare();
+	}
+
+	public void credit(int amount) {
+		money += amount;
+	}
+
+	public void debit(int amount) { 
+		money -= amount;
 	}
 
 }
