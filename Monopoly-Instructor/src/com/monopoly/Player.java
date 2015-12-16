@@ -39,7 +39,7 @@ public class Player {
 			location.passOverBy(this);
 		}
 		step();
-		location.landOnBy(this);
+		location.landOnBy(this); 
 	}
 
 	private void step() {

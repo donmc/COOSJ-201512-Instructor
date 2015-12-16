@@ -24,7 +24,7 @@ public class Board {
 	private void buildSquares() {
 		squares = new ArrayList<>();
 		
-		for (int i = 0; i < 40; i++) {
+		for (int i = 0; i < 40; i++) { 
 			switch (i) {
 			case 0:
 				squares.add(new GoSquare());
@@ -34,6 +34,12 @@ public class Board {
 				break;
 			case 38: 
 				squares.add(new LuxuryTaxSquare());
+				break;
+			case  1: case  3: case  6: case  8: case  9:
+			case 11: case 13: case 14: case 16: case 18: case 19:
+			case 21: case 23: case 24: case 26: case 27: case 29:
+			case 31: case 32: case 34: case 37: case 39:
+				squares.add(new LotSquare("Lot Square " + i, (i+1)*10, i));
 				break;
 			default:
 				squares.add(new Square("Square " + i));

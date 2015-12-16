@@ -67,10 +67,10 @@ public class WhenSettingUpGame {
 		List<Square>	 squares = game.getSquares();
 
 		assertEquals("Go Square", squares.get(0).getName());
-		assertEquals("Square 1", squares.get(1).getName());
+		assertEquals("Lot Square 1", squares.get(1).getName());
 		assertEquals("Square 2", squares.get(2).getName());
-		assertEquals("Square 3", squares.get(3).getName());
-		assertEquals("Square 39", squares.get(39).getName());
+		assertEquals("Lot Square 3", squares.get(3).getName());
+		assertEquals("Lot Square 39", squares.get(39).getName());
 	}
 	
 	@Test

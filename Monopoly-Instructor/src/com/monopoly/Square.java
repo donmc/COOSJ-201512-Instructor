@@ -10,7 +10,7 @@ public class Square {
 	}
 
 	public String getName() {
-		return name;
+		return name; 
 	}
 
 	public Square getNextSquare() {
