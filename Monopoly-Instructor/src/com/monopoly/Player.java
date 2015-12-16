@@ -7,6 +7,7 @@ public class Player {
 	private Square location;
 	private Token token;
 	private int money;
+	private int rollValue;
 
 	public Player(Token token, Square startSquare) {
 		this.location = startSquare;
@@ -27,7 +28,7 @@ public class Player {
 	}
 
 	public void takeTurn(Die die1, Die die2) {
-		int rollValue = die1.roll() + die2.roll();
+		this.rollValue = die1.roll() + die2.roll();
 		move(rollValue);
 	}
 
@@ -51,6 +52,10 @@ public class Player {
 
 	public void debit(int amount) { 
 		money -= amount;
+	}
+
+	public int getLastRoll() {
+		return rollValue;
 	}
 
 }
